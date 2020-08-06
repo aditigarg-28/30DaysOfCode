@@ -1,0 +1,36 @@
+var, let and const keyword:
+-> When we declare a variable with var, it is declared globally and is declared locally inside a function.
+-> Whereas when we declare variable with let keyword, it,'s scope is limited to a block in which it is declared. 
+-> const keyword has all the features of let but it is read only ie we can not reassign a variable declared with const keyword.
+
+Object.freeze() is used toprevent data Mutation.
+
+Rest Operator is used to create a function that take variable number of arguments. It is denoted by 3 Dots(...)
+
+Spread Operator looks just like Rest Operator ie 3 Dots(...) but it is used to extend an already existing array or it spreads out an array into individual parts.
+
+Destructing Assignment with the Rest Operator to reassign Array Elements
+const list = [1,2,3,4,5,6,7,8,9,10];
+const [ , , ...arr] = list;
+console.log(arr); -output: [3, 4, 5, 6, 7, 8, 9, 10]
+const [ a, b, ...arr1] = list;
+console.log(a,b,arr1); -output: 1,2
+
+We can import and export code from one file to another.
+demo.js file:
+export const name="aditi"
+
+index.js file:
+import { name } from "./demo"  //importing name variable from demo 
+console.log(name);
+
+we can import everything from a file using *.
+import * as abc from "capitalize_strings";
+//here abc is the object name which is used to access the code which we have imported.
+
+Exporting a default export- This is a fallback export and it is often used when we only want to export one thing from a file.
+export default function subtract(x,y) {return x - y;}
+
+Importing a default export- It is similar to previos import, the only difference is that we don't use curly braces while importing default export:
+import subtract from "math_functions";
+subtract(7,4);
