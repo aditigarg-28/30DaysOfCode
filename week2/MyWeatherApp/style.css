@@ -1,13 +1,22 @@
 *{
     font-family: "Rimouski";
 }
-
+body, html {
+  height: 100%;
+  margin: 0;
+}
 body{
    // background-color: rgb(22, 119, 126);
    background-image:url("weather.jpg");
- background-repeat:no-repeat;
+// background-repeat:repeat;
   //background-size: auto;
- background-size: 100% 165%;
+// background-size: 100% 165%;
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 button.refresh {
     display: block;
