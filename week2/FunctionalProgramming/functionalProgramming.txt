@@ -1,0 +1,77 @@
+REDUX is a state management library for js apps. We can use it with React, Angular, Vue, Vanilla Js.
+Why do we use state management library??
+It is required when we want to keep different parts of an application in sync ie if we update  in one part of UI, it should be automatically updated in other part of UI.
+Various State Management Solutions-
+1. Flux (be Facebook in 2014)
+2. Redux (inspired by flux and grown more popular due to its       simplicity)
+3. Mobx
+Redux stores all application states in a central repository ie single js object called store.
+PROS of Redux:
+1. It makes data flow transparent and predictable.
+2. Redux centralizes application's state.
+3. Easy debugging
+4. undo/redo
+5. Preserve page state
+CONS of Redux:
+1. Complexity
+2. Verbosity 
+------------------------------------------------------------------
+
+HighOrder Functions are those functions that take function as an argument. For example- setTimeout function, map function, etc.
+
+------------------------------------------------------------------
+Non functional Programming Approach:
+let input="   Javascript   ";
+let output="<div>"+input.trim()+"</div>";
+
+Functional Programming Approach:
+const trim= str=>str.trim();
+const wrapInDiv= str=>`<div>${str}</div>`;
+const result= wrapInDiv(trim(input));
+
+This Functional Programming Approach is little bit confusing or messy because we have to read it from right to left and it includes lot of brackets which make it more confusing. So the solution to this problem is Lodash. We can use compose and pipe functins(both are high order functions) to perform the above operations.
+const trim= str=>str.trim();
+const wrapInDiv= str=>`<div>${str}</div>`;
+const tranform= pipe(trim, wrapInDiv)
+transform(input)
+
+------------------------------------------------------------------
+Curring:
+Instead of sepaerating parameters by comma, we seperate them using arrow (=>).
+
+------------------------------------------------------------------
+
+Pure functions:
+We say a function is pure if everytime we call the function and giving same argument, returns the same result.
+	args(same)=>result(same)
+---------------------------------------------------
+This is not a pure function because everytime we call, it returns different values.
+function f1(num)
+{
+return num*Math.random();
+}
+----------------------------------------------------
+This is a pure function because if it returns same value when we pass same argument. For ex- if we pass 1 , it always returns 2.
+function f2(num)
+{
+return num*2
+}
+-----------------------------------------------------
+So in pure functions we never use:
+1. random values
+2. current date/time
+3. global state(DOM,files,db,etc)
+4. No mutation of parameters.
+------------------------------------------------------------------
+
+In pure functional programming languages, we can not mutate data. So js is not a pure functional programming language, It is multi-paradigm language where we can apply functional progarmming principles while writing js code. So JS does not support object mutation.
+
+Various js libraries are:
+1. Immutable (developed by facebook). It provides various immutable data structures.
+2. Immer
+3. Mori
+
+To install Immutable using npm:
+npm i immutable
+
+
